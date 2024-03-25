@@ -68,7 +68,11 @@ ul {
     background-color: #E4DAFD;
 }
 
-#nav-item-2 {
+#nav-item-3, #nav-item-3::before {
+    background-color: #D7E7FD;
+}
+
+#nav-item-2, #nav-item-3 {
     z-index: 1;
 }
 
