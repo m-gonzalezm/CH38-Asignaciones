@@ -32,7 +32,7 @@ const binarySearch = values => {
     changeStateButton("#lwr-than-btn", values[0] !== values[1]);
     changeStateButton("#gtr-than-btn", values[1] !== values[2]);
     giveComparisonClue(values).then(response => binarySearch(response)).catch(response => binarySearch(response));
-    renderOutput("Your number is", values[1], `Yes, that is my number ${reactions[values[3] > 6 ? 6 : values[3]]}`);
+    renderOutput("Your number is", values[1], `Yes, that is my number ${reactions[values[3] > 6 ? 6 : values[3]++]}`);
 }
 
 const giveComparisonClue = values => {
