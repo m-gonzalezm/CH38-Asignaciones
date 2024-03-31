@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./javascript-04.css">
+  <title>Array and loops</title>
+</head>
+
+<body>
+  <header>
+    <div class="c-white unselectable">
+      <span class="hint">Press any key to enter debug mode</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="sidenavbar c-white unselectable">
+      <div class="main-title"><span>Explorer</span></div>
+      <nav class="route-lvl-0">
+        <div class="route-label">
+          <figure class="route-svg">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.97612 10.0719L12.3334 5.7146L12.9521 6.33332L8.28548 11L7.66676 11L3.0001 6.33332L3.61882 5.7146L7.97612 10.0719Z" fill="#C5C5C5" />
+            </svg>
+            <!-- <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0719 8.02397L5.7146 3.66666L6.33332 3.04794L11 7.71461V8.33333L6.33332 13L5.7146 12.3813L10.0719 8.02397Z" fill="#C5C5C5"/>
+            </svg> -->
+          </figure>
+          <span class="title">Assignments</span>
+        </div>
+        <ul class="route-lvl-1">
+          <li>
+            <div class="route-label">
+              <figure class="route-svg">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.97612 10.0719L12.3334 5.7146L12.9521 6.33332L8.28548 11L7.66676 11L3.0001 6.33332L3.61882 5.7146L7.97612 10.0719Z" fill="#C5C5C5" />
+                </svg>
+              </figure>
+              <span>assets</span>
+            </div>
+            <ul class="route-lvl-2">
+              <li>
+                <div class="route-label">
+                  <figure class="route-svg">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.97612 10.0719L12.3334 5.7146L12.9521 6.33332L8.28548 11L7.66676 11L3.0001 6.33332L3.61882 5.7146L7.97612 10.0719Z" fill="#C5C5C5" />
+                    </svg>
+                  </figure>
+                  <span>assign</span>
+                </div>
+                <ul class="route-lvl-3">
+                  <li>
+                    <div class="route-label">
+                      <figure class="route-svg">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.97612 10.0719L12.3334 5.7146L12.9521 6.33332L8.28548 11L7.66676 11L3.0001 6.33332L3.61882 5.7146L7.97612 10.0719Z" fill="#C5C5C5" />
+                        </svg>
+                      </figure>
+                      <span>binary-search</span>
+                    </div>
+                    <ul class="route-lvl-4">
+                      <li>
+                        <a href="../binary-search/binary-search.html" class="file-label">
+                          <figure class="file-svg">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.5 L7 4 L7 5.4 L4 8 L7 10.6 L7 12 L3 8.5 Z" fill="#E37933" /> <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7.5 L9 4 L9 5.4 L12 8 L9 10.6 L9 12 L13 8.5 Z" fill="#E37933" />
+                            </svg> <!-- svg provisional -->
+                          </figure>
+                          <span>binary-search.html</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="route-label">
+                      <figure class="route-svg">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.97612 10.0719L12.3334 5.7146L12.9521 6.33332L8.28548 11L7.66676 11L3.0001 6.33332L3.61882 5.7146L7.97612 10.0719Z" fill="#C5C5C5" />
+                        </svg>
+                      </figure>
+                      <span>javascript-04</span>
+                    </div>
+                    <ul class="route-lvl-4">
+                      <li>
+                        <a class="file-label">
+                          <figure class="file-svg">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.5 L7 4 L7 5.4 L4 8 L7 10.6 L7 12 L3 8.5 Z" fill="#E37933" /> <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7.5 L9 4 L9 5.4 L12 8 L9 10.6 L9 12 L13 8.5 Z" fill="#E37933" />
+                            </svg> <!-- svg provisional -->
+                          </figure>
+                          <span>array-and-loops.html</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="route-label">
+                      <figure class="route-svg">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.97612 10.0719L12.3334 5.7146L12.9521 6.33332L8.28548 11L7.66676 11L3.0001 6.33332L3.61882 5.7146L7.97612 10.0719Z" fill="#C5C5C5" />
+                        </svg>
+                      </figure>
+                      <span>javascript-07</span>
+                    </div>
+                    <ul class="route-lvl-4">
+                      <li>
+                        <a href="../javascript-07/javascript-07.html" class="file-label">
+                          <figure class="file-svg">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.5 L7 4 L7 5.4 L4 8 L7 10.6 L7 12 L3 8.5 Z" fill="#E37933" /> <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7.5 L9 4 L9 5.4 L12 8 L9 10.6 L9 12 L13 8.5 Z" fill="#E37933" />
+                            </svg> <!-- svg provisional -->
+                          </figure>
+                          <span>fetch-api.html</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="route-label">
+                      <figure class="route-svg">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.97612 10.0719L12.3334 5.7146L12.9521 6.33332L8.28548 11L7.66676 11L3.0001 6.33332L3.61882 5.7146L7.97612 10.0719Z" fill="#C5C5C5" />
+                        </svg>
+                      </figure>
+                      <span>web-07</span>
+                    </div>
+                    <ul class="route-lvl-4">
+                      <li>
+                        <a href="../web-07/web-07.html" class="file-label">
+                          <figure class="file-svg">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.5 L7 4 L7 5.4 L4 8 L7 10.6 L7 12 L3 8.5 Z" fill="#E37933" /> <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7.5 L9 4 L9 5.4 L12 8 L9 10.6 L9 12 L13 8.5 Z" fill="#E37933" />
+                            </svg> <!-- svg provisional -->
+                          </figure>
+                          <span>greeting.html</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="../../../index.html" class="file-label">
+              <figure class="file-svg">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.5 L7 4 L7 5.4 L4 8 L7 10.6 L7 12 L3 8.5 Z" fill="#E37933" /> <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7.5 L9 4 L9 5.4 L12 8 L9 10.6 L9 12 L13 8.5 Z" fill="#E37933" />
+                </svg> <!-- svg provisional -->
+              </figure>
+              <span>index.html</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <!-- <div class="sctn-divisor"></div> en desarrollo-->
+    <section class="line-nmb-sctn unselectable">
+      <div class="line-nmb"><span>1</span></div>
+      <div class="line-nmb"><span>2</span></div>
+      <div class="line-nmb"><span>3</span></div>
+      <div class="line-nmb"><span>4</span></div>
+      <div class="line-nmb"><span>5</span></div>
+      <div class="line-nmb"><span class="c-white">6</span></div>
+      <div class="line-nmb"><span>7</span></div>
+      <div class="line-nmb"><span>8</span></div>
+      <div class="line-nmb"><span>9</span></div>
+      <div class="line-nmb"><span>10</span></div>
+      <div class="line-nmb"><span>12</span></div>
+      <div class="line-nmb"><span>13</span></div>
+    </section>
+    <section class="exercise-sctn unselectable">
+      <article class="exercise-1 c-white">
+        <div class="code-line"><span class="comment">Exercise 1</span></div>
+        <div class="code-line"><span class="comment">Array.prototype.join() method</span></div>
+        <div class="code-line"></div>
+        <div class="code-line">
+          <span class="word">This</span><span class="word">is</span><span class="word">a</span><span>sentence.</span>
+        </div>
+        <div class="code-line"></div>
+        <button class="join-btn">Click here to join the array</button>
+        <div class="code-line"></div>
+        <div class="code-box">
+          <div class="code-line">
+            <span class="reserved">const</span> <span class="const">words</span> = <span class="c-yellow">[</span><span
+              class="string">"This"</span>, <span class="string">"is"</span>, <span class="string">"a"</span>, <span
+              class="string">"sentence."</span><span class="c-yellow">]</span>;
+          </div>
+          <div class="code-line"></div>
+          <div class="code-line">
+            <!-- <span class="c-blue">const</span> <span class="function">printOutString</span> = <span class="variable">words</span> <span class="c-blue">=></span> <span class="variable">console</span>.<span class="function"></span><span class="c-yellow">(</span><span class="variable">words</span>.<span class="function">join</span><span class="c-pink">(</span><span class="string">" "</span><span class="c-pink">)</span><span class="c-yellow">)</span>; -->
+            <span class="variable">document</span>.<span class="function">querySelector</span><span
+              class="c-yellow">(</span><span class="string">"#sixth-line-text"</span><span class="c-yellow">)</span>.<span
+              class="function">addEventListener</span><span class="c-yellow">(</span><span
+              class="string">"click"</span>, <span class="c-pink">()</span> <span class="reserved">=></span> <span
+              class="c-pink">{</span>
+          </div>
+          <div class="code-line idented">
+            <span class="variable">document</span>.<span class="function">querySelector</span><span
+              class="c-blue">(</span><span class="string">"#fourth-line"</span><span class="c-blue">)</span>.<span
+              class="variable">innerHTML</span> = <span class="const">words</span>.<span
+              class="function">join</span><span class="c-blue">(</span><span class="string">" "</span><span
+              class="c-blue">)</span>;
+          </div>
+          <div class="code-line">
+            <span class="c-pink">}</span><span class="c-yellow">)</span>;
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+  <script src="./js/exercise-1.js"></script>
+  <script src="./js/exercise-2.js"></script>
+  <script src="./js/exercise-3.js"></script>
+  <script src="./js/exercise-4.js"></script>
+  <script src="./js/exercise-5.js"></script>
+  <script src="./js/exercise-6.js"></script>
+  <script src="./javascript-04.js"></script>
+</body>
+
+</html>

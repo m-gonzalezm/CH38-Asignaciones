@@ -31,17 +31,20 @@ const binarySearch = values => {
     console.log(values);
     changeStateButton("#lwr-than-btn", values[0] !== values[1]);
     changeStateButton("#gtr-than-btn", values[1] !== values[2]);
-    giveComparisonClue(values).then(response => binarySearch(response)).catch(response => binarySearch(response));
+    giveComparisonClue(values).then(response => binarySearch(response)).catch(() => renderOutput("I knew it! Excelent choice", "", "Restart app"));
     renderOutput("Your number is", values[1], `Yes, that is my number ${reactions[values[3] > 6 ? 6 : values[3]++]}`);
 }
 
 const giveComparisonClue = values => {
-    return new Promise((lowerThan, greaterThan) => {
+    return new Promise((differentFrom, sameAs) => {
         document.querySelector("#lwr-than-btn").addEventListener("click", event => {
-            lowerThan([values[0], Math.floor((values[1] - values[0]) / 2 + values[0]), values[1] - 1, values[3]]);
+            differentFrom([values[0], Math.floor((values[1] - values[0]) / 2 + values[0]), values[1] - 1, values[3]]);
         });
         document.querySelector("#gtr-than-btn").addEventListener("click", event => {
-            greaterThan([values[1] + 1, Math.ceil((values[2] - values[1]) / 2 + values[1]), values[2], values[3]]);
+            differentFrom([values[1] + 1, Math.ceil((values[2] - values[1]) / 2 + values[1]), values[2], values[3]]);
+        });
+        document.getElementById("action-button").addEventListener("click", event => {
+            sameAs();
         });
     });
 }
@@ -53,7 +56,6 @@ document.getElementById("action-button").addEventListener("click", event => {
             binarySearch([1, Math.round(Math.random() * 99) + 1, 100, 0]);
         } else renderOutput("Think a number from 1 to 100 and i will guess it", "", "Begin")
     } else {
-        renderOutput("I knew it! Excelent choice", "", "Restart app");
         document.querySelector(".comparison-buttons").classList.add("d-none");
     }
 });
